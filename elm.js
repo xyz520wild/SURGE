@@ -30,7 +30,7 @@ if ($request && $request.method != 'OPTIONS') {
     console.log(ckItems[1]);
     console.log(ckItems[2]);
     console.log(ckItems[3]);
-    const tokenValue = `${ckItems[0]}${ckItems[1]}${ckItems[2]}${ckItems[3]}`;
+    const tokenValue = `${ckItems[2]}${ckItems[3]}${ckItems[0]}${ckItems[1]}`;
     console.log(tokenValue);
     if (ckItems) {
         sliverkiss.msg(cookieName, "", `获取签到Cookie成功🎉\n${tokenValue}`);
