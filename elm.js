@@ -23,7 +23,9 @@ const sliverkiss = init();
 
 //获取Cookie
 
-if (ckItems && ckItems.length >= 4) {
+if ($request && $request.method != 'OPTIONS') {
+    const CV = $request.headers['Cookie'] || $request.headers['cookie'];
+    const ckItems = CV.match(/(cookie2|_tb_token_|USERID|SID)=.+?;/g);
     console.log(ckItems[0]);
     console.log(ckItems[1]);
     console.log(ckItems[2]);
