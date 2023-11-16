@@ -25,7 +25,7 @@ const sliverkiss = init();
 
 if ($request && $request.method != 'OPTIONS') {
     const CV = $request.headers['Cookie'] || $request.headers['cookie'];
-    const ckItems = CV.match(/(cookie2|_tb_token_|USERID|SID)=.+?;/g);
+    const ckItems = CV.match(/(cookie2|tb_token|USERID|SID)=.+?;/g);
     console.log(ckItems[0]);
     console.log(ckItems[1]);
     console.log(ckItems[2]);
